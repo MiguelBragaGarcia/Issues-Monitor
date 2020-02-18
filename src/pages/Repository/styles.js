@@ -57,7 +57,7 @@ em relaçãoa  DOM e depois disso aplica a cor da borda */
     }
     /**Margem entre as li */
     & + li {
-        margint-top: 10px;
+        margin-top: 10px;
     }
 
     img {
@@ -103,7 +103,7 @@ em relaçãoa  DOM e depois disso aplica a cor da borda */
 export const IssueFilter = styled.div`
     display: flex;
     justify-content: center;
-    padding-botton: 15px;
+    padding-bottom: 15px;
 
     button {
         border-radius: 4px;
