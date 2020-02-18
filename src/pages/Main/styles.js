@@ -8,7 +8,7 @@ export const Form = styled.form`
 
     input {
         flex: 1;
-        border: 1px solid #eee;
+        border: 1px solid ${props => (props.error ? 'red' : '#eee')};
         padding: 10px 15px;
         border-radius: 4px;
         font-size: 16px;
@@ -49,13 +49,14 @@ export const SubmitButton = styled.button.attrs(props => ({
 
     /**Passa por propriedade o que deve ser feito caso a propriedade loading seja verdadeira */
     ${props =>
-        props.loading && // OPERADOr
-        css`
-            /**Cria a animação circular */
-            svg {
-                animation: ${rotate} 2s linear infinite;
-            }
-        `}
+        props.loading
+            ? css`
+                  /**Cria a animação circular */
+                  svg {
+                      animation: ${rotate} 2s linear infinite;
+                  }
+              `
+            : undefined}
 `;
 
 export const List = styled.ul`
